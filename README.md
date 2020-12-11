@@ -15,52 +15,23 @@
 
 
 ## Input
-* X     : signal ( 1 x samples )
-* opts  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods)
+* *X*   : signal ( 1 x samples )
+* opts  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods) )
 
 
 ## Output
-* feat : feature vector 
+* feat : feature vector ( you may use other name like *f1* or etc. ) 
     
     
 ## Usage
 The main function *jfemg* is adopted to perform feature extraction. You may switch the method by changing the 'mav' to [other abbreviations](/README.md#list-of-available-feature-extraction-methods)
-* If you wish to extract mean absolute value (MAV) then you may write
+* If you wish to extract mean absolute value ( MAV ) then you may write
 ```code
 feat = jfemg('mav', X);
 ```
-* If you want to extract enhanced wavelenght (EWL) then you may write
+* If you want to extract enhanced wavelenght ( EWL ) then you may write
 ```code
 feat = jfemg('ewl', X);
-```
-
-
-## Contribution
-
-Please consider citing my papers if you found this toolbox is useful
-
-```code 
-@article{too2019classification,
-  title={Classification of hand movements based on discrete wavelet transform and enhanced feature extraction},
-  author={Too, Jingwei and Abdullah, Abdul Rahim and Saad, Norhashimah Mohd},
-  journal={Int. J. Adv. Comput. Sci. Appl},
-  volume={10},
-  number={6},
-  pages={83--89},
-  year={2019}
-}
-
-@article{too2019emg,
-  title={EMG feature selection and classification using a Pbest-guide binary particle swarm optimization},
-  author={Too, Jingwei and Abdullah, Abdul Rahim and Mohd Saad, Norhashimah and Tee, Weihown},
-  journal={Computation},
-  volume={7},
-  number={1},
-  pages={12},
-  year={2019},
-  publisher={Multidisciplinary Digital Publishing Institute}
-}
-
 ```
 
 
@@ -119,17 +90,26 @@ feat = [f1, f2, f3];
 
 
 ## List of available feature extraction methods
+* Some methods contain parameter to be adjusted. If you do not set the parameter then the feature will be extracted using default setting
+* For convenience, you may extract the feature with parameter using default setting as following. That is, you don't have to set the *opts* 
+```code
+feat = jfemg('zc', X);
+```
+* You can use *opts* to set the parameter
+    + thres : threshold
+    + order : the number of orders
+
 
 | No. | Abbreviation | Name                                         |  Parameter ( default )  |
 |-----|--------------|----------------------------------------------|-------------------------|
 | 40  | 'emav'       | Enhanced Mean absolute value                 | -                       |
 | 39  | 'ewl'        | Enhanced Wavelength                          | -                       |
 | 38  | 'fzc'        | New Zero Crossing                            | -                       |
-| 37  | 'ass'        | Absolute Value Of The Summation              | -                       |
-| 36  | 'asm'        | Absolute Value Of Summation Of Square Root   | -                       |
-| 35  | 'msr'        | Mean Value Of The Square Root                | -                       |
+| 37  | 'ass'        | Absolute Value of Summation                  | -                       |
+| 36  | 'asm'        | Absolute Value of Summation of Square Root   | -                       |
+| 35  | 'msr'        | Mean Value of The Square Root                | -                       |
 | 34  | 'ltkeo'      | Log Teager Kaiser Energy Operator            | -                       |
-| 33  | 'lcov'       | Log Coefficient Of Variation                 | -                       |
+| 33  | 'lcov'       | Log Coefficient of Variation                 | -                       |
 | 32  | 'card'       | Cardinality                                  | opts.thres = 0.01       |
 | 31  | 'ldasdv'     | Log Difference Absolute Standard Deviation   | -                       |
 | 30  | 'ldamv'      | Log Difference Absolute Mean Value           | -                       |
@@ -142,7 +122,7 @@ feat = [f1, f2, f3];
 | 23  | 'iqr'        | Interquartile Range                          | -                       |
 | 22  | 'skew'       | Skewness                                     | -                       |
 | 21  | 'kurt'       | Kurtosis                                     | -                       |
-| 20  | 'cov'        | Coefficient Of Variation                     | -                       |
+| 20  | 'cov'        | Coefficient of Variation                     | -                       |
 | 19  | 'sd'         | Standard Deviation                           | -                       |
 | 18  | 'var'        | Variance                                     | -                       |
 | 17  | 'ae'         | Average Energy                               | -                       |
@@ -164,4 +144,31 @@ feat = [f1, f2, f3];
 | 01  | 'mfl'        | Maximum Fractal Length                       | -                       |
 
 
+## Contribution
+
+Please consider citing my papers if you found this toolbox is useful
+
+```code 
+@article{too2019classification,
+  title={Classification of hand movements based on discrete wavelet transform and enhanced feature extraction},
+  author={Too, Jingwei and Abdullah, Abdul Rahim and Saad, Norhashimah Mohd},
+  journal={Int. J. Adv. Comput. Sci. Appl},
+  volume={10},
+  number={6},
+  pages={83--89},
+  year={2019}
+}
+
+@article{too2019emg,
+  title={EMG feature selection and classification using a Pbest-guide binary particle swarm optimization},
+  author={Too, Jingwei and Abdullah, Abdul Rahim and Mohd Saad, Norhashimah and Tee, Weihown},
+  journal={Computation},
+  volume={7},
+  number={1},
+  pages={12},
+  year={2019},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+```
 
