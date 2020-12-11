@@ -15,7 +15,7 @@
 
 
 ## Input
-* X     : EMG signal ( 1 x samples )
+* X     : signal ( 1 x samples )
 * opts  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods)
 
 
@@ -25,13 +25,13 @@
     
 ## Usage
 The main function *jfemg* is adopted to perform feature extraction. You may switch the method by changing the 'mav' to [other abbreviations](/README.md#list-of-available-feature-extraction-methods)
-* If you wish to extract mean absolute value then you may write
+* If you wish to extract mean absolute value (MAV) then you may write
 ```code
 feat = jfemg('mav', X);
 ```
-* If you want to extract zero crossing then you may write
+* If you want to extract enhanced wavelenght (EWL) then you may write
 ```code
-feat = jfemg('zc', X ,opts);
+feat = jfemg('ewl', X);
 ```
 
 
@@ -64,37 +64,56 @@ Please consider citing my papers if you found this toolbox is useful
 ```
 
 
-### Example 1 :  
+### Example 1 : Extract 5 normal features ( without parameter )
 ```code 
-% Common parameter settings
-opts.k  = 5;      % Number of k in K-nearest neighbor
-opts.N  = 10;     % number of solutions
-opts.T  = 100;    % maximum number of iterations
-% Parameters of PSO
-opts.c1 = 2;
-opts.c2 = 2;
-opts.w  = 0.9;
+% Generate a sample random signal X
+fs = 1000;            % Sampling frequency 
+Ts = 1 / fs;          % Period
+t  = 0 : Ts : 0.25; 
+X  = 0.01 * (cos(2 * pi * fs * t) + randn(1, length(t)));
 
-% Load dataset
-load ionosphere.mat;
+% Plot sample signal
+plot(t,X);  grid on
+xlabel('Number of samples');
+ylabel('Amplitude');
 
-% Ratio of validation data
-ho = 0.2;
-% Divide data into training and validation sets
-HO = cvpartition(label,'HoldOut',ho); 
-opts.Model = HO; 
+% Enhanced Mean Absolute Value
+f1 = jfemg('emav', X); 
+% Average Amplitude Change
+f2 = jfemg('aac', X); 
+% Waveform Length
+f3 = jfemg('wl', X); 
+% Maximum Fractal Length 
+f4 = jfemg('mfl', X); 
+% Root Mean Square
+f5 = jfemg('rms', X); 
 
-% Perform feature selection 
-FS = jfs('pso',feat,label,opts);
+% Feature vector
+feat = [f1, f2, f3, f4, f5];
 
-% Define index of selected features
-sf_idx = FS.sf;
+```
 
-% Accuracy  
-Acc = jknn(feat(:,sf_idx),label,opts); 
 
-% Plot convergence
-plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('PSO');
+### Example 2 : Extract 3 features with parameter    
+```code
+% Generate a sample random signal X
+fs = 1000;            % Sampling frequency 
+Ts = 1 / fs;          % Period
+t  = 0 : Ts : 0.25; 
+X  = 0.01 * (cos(2 * pi * fs * t) + randn(1, length(t)));
+
+% Zeros Crossing
+opts.thres = 0.01;
+f1 = jfemg('zc', X, opts); 
+% Slope Sign Change
+opts.thres = 0.01;
+f2 = jfemg('ssc', X, opts);
+% Temporal Moment
+opts.order = 3;
+f3 = jfemg('tm', X, opts);
+
+% Feature vector
+feat = [f1, f2, f3];
 
 ```
 
