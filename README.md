@@ -8,6 +8,8 @@
 
 | No. | Abbreviation | Name                                         |  Parameter ( default )  |
 |-----|--------------|----------------------------------------------|-------------------------|
+| 19  | 
+| 18  | 'iemg'       | Integrated EMG                               | -                       |
 | 17  | 'emav'       | Enhanced Mean absolute value                 | -                       |
 | 16  | 'ewl'        | Enhanced Wavelength                          | -                       |
 | 15  | 'mav'        | Mean Absolute Value                          | -                       |
