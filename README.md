@@ -107,7 +107,7 @@ feat = jfemg('zc', X);
 | 38  | 'fzc'        | New Zero Crossing                            | -                       |
 | 37  | 'ass'        | Absolute Value of Summation                  | -                       |
 | 36  | 'asm'        | Absolute Value of Summation of Square Root   | -                       |
-| 35  | 'msr'        | Mean Value of The Square Root                | -                       |
+| 35  | 'msr'        | Mean Value of Square Root                | -                       |
 | 34  | 'ltkeo'      | Log Teager Kaiser Energy Operator            | -                       |
 | 33  | 'lcov'       | Log Coefficient of Variation                 | -                       |
 | 32  | 'card'       | Cardinality                                  | opts.thres = 0.01       |
