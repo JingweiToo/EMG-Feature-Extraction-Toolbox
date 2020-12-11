@@ -1,29 +1,56 @@
 # EMG-Feature-Extraction-Toolbox
-This toolbox offers 17 types of EMG features 
-(1) Enhanced Mean absolute value (EMAV) 
-(2) Enhanced Wavelength (EWL) 
-(3) Mean Absolute Value (MAV) 
-(4) Slope Sign Change (SSC) 
-(5) Zero Crossing (ZC) 
-(6) Waveform Length (WL) 
-(7) Root Mean Square (RMS)
-(8) Average Amplitude Change (AAC) 
-(9) Difference Absolute Standard Deviation Value (DASDV)
-(10) Log Detector (LD) 
-(11) Modified Mean Absolute Value (MMAV) 
-(12) Modified Mean Absolute Value 2 (MMAV2) 
-(13) Myopulse Percentage Rate (MYOP)
-(14) Simple Square Integral (SSI) 
-(15) Variance of EMG (VAR) 
-(16) Willison Amplitude (WA) 
-(17) Maximum Fractal Length (MFL)  
 
-The "Main" demos how the feature extraction methods can be applied by using the generated sample signal. 
+* This toolbox offers 17 types of EMG features 
+* The "Main" demos how the feature extraction methods can be applied by using the generated sample signal. 
 
-********************************************************************************************************************************** 
 
-Detail of feature extraction methods can be found in the following papers: 
+## List of available EMG feature extraction methods
 
-[1] Too, J., Abdullah, A.R. and Saad, N.M., 2019. Classification of hand movements based on discrete wavelet transform and enhanced feature extraction. Int. J. Adv. Comput. Sci. Appl, 10(6), pp.83-89. DOI: http://dx.doi.org/10.14569/IJACSA.2019.0100612  
+| No. | Abbreviation | Name                                         |  Parameter ( default )  |
+|-----|--------------|----------------------------------------------|-------------------------|
+| 17  | 'emav'       | Enhanced Mean absolute value                 | -                       |
+| 16  | 'ewl'        | Enhanced Wavelength                          | -                       |
+| 15  | 'mav'        | Mean Absolute Value                          | -                       |
+| 14  | 'ssc'        | Slope Sign Change                            | opts.thres = 0.01       |
+| 13  | 'zc'         | Zero Crossing                                | opts.thres = 0.01       |
+| 12  | 'wl'         | Waveform Length                              | -                       |
+| 11  | 'rms'        | Root Mean Square                             | -                       |
+| 10  | 'aac'        | Average Amplitude Change                     | -                       |
+| 09  | 'dasdv'      | Difference Absolute Standard Deviation Value | -                       |
+| 08  | 'ld'         | Log Detector                                 | -                       |
+| 07  | 'mmav'       | Modified Mean Absolute Value                 | -                       |
+| 06  | 'mmav2'      | Modified Mean Absolute Value 2               | -                       |
+| 05  | 'myop'       | Myopulse Percentage Rate                     | opts.thres = 0.016      |
+| 04  | 'ssi'        | Simple Square Integral                       | -                       |
+| 03  | 'var'        | Variance of EMG                              | -                       |
+| 02  | 'wa'         | Willison Amplitude                           | -                       |
+| 01  | 'mfl'        | Maximum Fractal Length                       | -                       |
 
-[2] Too, J., Abdullah, A.R., Mohd Saad, N. and Tee, W., 2019. EMG feature selection and classification using a Pbest-guide binary particle swarm optimization. Computation, 7(1), p.12. DOI: https://doi.org/10.3390/computation7010012
+
+## Contributions 
+
+Please consider citing my papers if you found this toolbox is useful
+
+```code 
+@article{too2019classification,
+  title={Classification of hand movements based on discrete wavelet transform and enhanced feature extraction},
+  author={Too, Jingwei and Abdullah, Abdul Rahim and Saad, Norhashimah Mohd},
+  journal={Int. J. Adv. Comput. Sci. Appl},
+  volume={10},
+  number={6},
+  pages={83--89},
+  year={2019}
+}
+
+@article{too2019emg,
+  title={EMG feature selection and classification using a Pbest-guide binary particle swarm optimization},
+  author={Too, Jingwei and Abdullah, Abdul Rahim and Mohd Saad, Norhashimah and Tee, Weihown},
+  journal={Computation},
+  volume={7},
+  number={1},
+  pages={12},
+  year={2019},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+```
