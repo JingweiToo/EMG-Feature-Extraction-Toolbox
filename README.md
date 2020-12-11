@@ -1,10 +1,10 @@
-# EMG-Feature-Extraction-Toolbox
+# EMG Feature Extraction Toolbox
 
 * This toolbox offers 17 types of EMG features 
 * The "Main" demos how the feature extraction methods can be applied by using the generated sample signal. 
 
 
-## List of available EMG feature extraction methods
+## List of available feature extraction methods
 
 | No. | Abbreviation | Name                                         |  Parameter ( default )  |
 |-----|--------------|----------------------------------------------|-------------------------|
