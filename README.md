@@ -105,8 +105,8 @@ feat = jfemg('zc', X);
 | 40  | 'emav'       | Enhanced Mean absolute value                 | -                       |
 | 39  | 'ewl'        | Enhanced Wavelength                          | -                       |
 | 38  | 'fzc'        | New Zero Crossing                            | -                       |
-| 37  | 'ass'        | Absolute Value of Summation                  | -                       |
-| 36  | 'asm'        | Absolute Value of Summation of Square Root   | -                       |
+| 37  | 'asm'        | Absolute Value of Summation of *exp* root    | -                       |
+| 36  | 'ass'        | Absolute Value of Summation of Square Root   | -                       |
 | 35  | 'msr'        | Mean Value of Square Root                    | -                       |
 | 34  | 'ltkeo'      | Log Teager Kaiser Energy Operator            | -                       |
 | 33  | 'lcov'       | Log Coefficient of Variation                 | -                       |
