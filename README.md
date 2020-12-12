@@ -1,4 +1,4 @@
-# Jx-EMGT : An EMG Feature Extraction Toolbox
+# Jx-EMGT : Electromyography ( EMG ) Feature Extraction Toolbox
 
 ---
 > "Toward Talent Scientist: Sharing and Learning Together"
