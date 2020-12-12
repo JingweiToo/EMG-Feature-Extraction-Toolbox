@@ -1,12 +1,12 @@
-% Feature Extraction Toolbox by Jingwei Too - 11/12/2020
+% Feature Extraction Toolbox by Jingwei Too 
 
 function feat = jfemg(type,X,opts)
 switch type
   case 'fzc'    ; fun = @jNewZeroCrossing;
   case 'ewl'    ; fun = @jEnhancedWaveLength;
   case 'emav'   ; fun = @jEnhancedMeanAbsoluteValue;    
-  case 'ass'    ; fun = @jAbsoluteValueOfTheSummation;
-  case 'asm'    ; fun = @jAbsoluteValueOfTheSummationOfSquareRoot;
+  case 'asm'    ; fun = @jAbsoluteValueOfTheSummationOfExpRoot;
+  case 'ass'    ; fun = @jAbsoluteValueOfTheSummationOfSquareRoot;
   case 'msr'    ; fun = @jMeanValueOfTheSquareRoot;
   case 'ltkeo'  ; fun = @jLogTeagerKaiserEnergyOperator; 
   case 'lcov'   ; fun = @jLogCoefficientOfVariation;
