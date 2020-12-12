@@ -62,6 +62,9 @@ f5 = jfemg('rms', X);
 % Feature vector
 feat = [f1, f2, f3, f4, f5];
 
+% Display features
+disp(feat)
+
 ```
 
 
@@ -85,6 +88,9 @@ f3 = jfemg('tm', X, opts);
 
 % Feature vector
 feat = [f1, f2, f3];
+
+% Display features
+disp(feat)
 
 ```
 
