@@ -158,7 +158,7 @@ Please consider citing my papers if you found this toolbox is useful
 @article{too2019classification,
   title={Classification of hand movements based on discrete wavelet transform and enhanced feature extraction},
   author={Too, Jingwei and Abdullah, Abdul Rahim and Saad, Norhashimah Mohd},
-  journal={Int. J. Adv. Comput. Sci. Appl},
+  journal={International Journal of Advanced Computer Science and Applications},
   volume={10},
   number={6},
   pages={83--89},
