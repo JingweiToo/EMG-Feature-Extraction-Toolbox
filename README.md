@@ -102,8 +102,8 @@ disp(feat)
 feat = jfemg('zc', X);
 ```
 * You can use *opts* to set the parameter
-    + thres : threshold
-    + order : the number of orders
+    + *thres* : threshold
+    + *order* : the number of orders
 
 
 | No. | Abbreviation | Name                                         |  Parameter ( default )  |
