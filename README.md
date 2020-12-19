@@ -150,7 +150,7 @@ feat = jfemg('zc', X);
 | 01  | 'mfl'        | Maximum Fractal Length                       | -                       |
 
 
-## Contributions
+## Cite As
 
 Please consider citing my papers if you found this toolbox is useful
 
