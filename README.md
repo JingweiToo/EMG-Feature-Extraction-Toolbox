@@ -15,7 +15,7 @@
 
 
 ## Input
-* *X*   : signal ( 1 x samples )
+* X     : signal ( 1 *x* samples )
 * opts  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods) )
 
 
@@ -164,6 +164,7 @@ Please consider citing my papers if you found this toolbox is useful
   pages={83--89},
   year={2019}
 }
+
 
 @article{too2019emg,
   title={EMG feature selection and classification using a Pbest-guide binary particle swarm optimization},
