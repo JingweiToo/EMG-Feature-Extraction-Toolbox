@@ -151,9 +151,6 @@ feat = jfemg('zc', X);
 
 
 ## Cite As
-
-Please consider citing my papers if you found this toolbox is useful
-
 ```code 
 @article{too2019classification,
   title={Classification of hand movements based on discrete wavelet transform and enhanced feature extraction},
