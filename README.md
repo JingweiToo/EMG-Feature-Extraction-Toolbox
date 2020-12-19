@@ -15,12 +15,12 @@
 
 
 ## Input
-* X     : signal ( 1 *x* samples )
-* opts  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods) )
+* *X*     : signal ( 1 *x* samples )
+* *opts*  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods) )
 
 
 ## Output
-* feat : feature vector ( you may use other name like *f1* or etc. ) 
+* *feat* : feature vector ( you may use other name like *f1* or etc. ) 
     
     
 ## Usage
