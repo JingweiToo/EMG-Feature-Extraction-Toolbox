@@ -64,7 +64,6 @@ feat = [f1, f2, f3, f4, f5];
 
 % Display features
 disp(feat)
-
 ```
 
 
@@ -91,7 +90,6 @@ feat = [f1, f2, f3];
 
 % Display features
 disp(feat)
-
 ```
 
 
@@ -173,6 +171,5 @@ feat = jfemg('zc', X);
   year={2019},
   publisher={Multidisciplinary Digital Publishing Institute}
 }
-
 ```
 
