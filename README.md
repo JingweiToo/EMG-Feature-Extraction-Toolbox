@@ -1,5 +1,9 @@
 # Jx-EMGT : Electromyography ( EMG ) Feature Extraction Toolbox
 
+[![View EMG Feature Extraction Toolbox on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/71514-emg-feature-extraction-toolbox)
+[![License](https://img.shields.io/badge/license-BSD_3-yellow.svg)](https://github.com/JingweiToo/EMG-Feature-Extraction-Toolbox/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/badge/release-1.4-green.svg)](https://github.com/JingweiToo/EMG-Feature-Extraction-Toolbox)
+
 ---
 > "Toward Talent Scientist: Sharing and Learning Together"
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
@@ -11,20 +15,20 @@
 ## Introduction
 
 * This toolbox offers 40 types of EMG features 
-* The < A_Main.m file > demos how the feature extraction methods can be applied using generated sample signal. 
+* The `A_Main` file demos how the feature extraction methods can be applied using generated sample signal. 
 
 
 ## Input
-* *X*     : signal ( 1 *x* samples )
-* *opts*  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods) )
+* *`X`*     : signal ( 1 *x* samples )
+* *`opts`*  : parameter settings ( some methods have parameters: refer [here](/README.md#list-of-available-feature-extraction-methods) )
 
 
 ## Output
-* *feat* : feature vector ( you may use other name like *f1* or etc. ) 
+* *`feat`* : feature vector ( you may use other name like *f1* or etc. ) 
     
     
 ## Usage
-The main function *jfemg* is adopted to perform feature extraction. You may switch the method by changing the 'mav' to [other abbreviations](/README.md#list-of-available-feature-extraction-methods)
+The main function `jfemg` is adopted to perform feature extraction. You may switch the method by changing the `'mav'` to [other abbreviations](/README.md#list-of-available-feature-extraction-methods)
 * If you wish to extract mean absolute value ( MAV ) then you may write
 ```code
 feat = jfemg('mav', X);
@@ -95,57 +99,57 @@ disp(feat)
 
 ## List of available feature extraction methods
 * Some methods contain parameter to be adjusted. If you do not set the parameter then the feature will be extracted using default setting
-* For convenience, you may extract the feature with parameter using default setting as following. That is, you don't have to set the *opts* 
+* For convenience, you may extract the feature with parameter using default setting as following. That is, you don't have to set the *`opts`* 
 ```code
 feat = jfemg('zc', X);
 ```
-* You can use *opts* to set the parameter
-    + *thres* : threshold
-    + *order* : the number of orders
+* You can use *`opts`* to set the parameter
+    + *`thres`* : threshold
+    + *`order`* : the number of orders
 
 
 | No. | Abbreviation | Name                                         |  Parameter ( default )  |
 |-----|--------------|----------------------------------------------|-------------------------|
-| 40  | 'emav'       | Enhanced Mean absolute value                 | -                       |
-| 39  | 'ewl'        | Enhanced Wavelength                          | -                       |
-| 38  | 'fzc'        | New Zero Crossing                            | -                       |
-| 37  | 'asm'        | Absolute Value of Summation of *exp* root    | -                       |
-| 36  | 'ass'        | Absolute Value of Summation of Square Root   | -                       |
-| 35  | 'msr'        | Mean Value of Square Root                    | -                       |
-| 34  | 'ltkeo'      | Log Teager Kaiser Energy Operator            | -                       |
-| 33  | 'lcov'       | Log Coefficient of Variation                 | -                       |
-| 32  | 'card'       | Cardinality                                  | opts.thres = 0.01       |
-| 31  | 'ldasdv'     | Log Difference Absolute Standard Deviation   | -                       |
-| 30  | 'ldamv'      | Log Difference Absolute Mean Value           | -                       |
-| 29  | 'dvarv'      | Difference Variance Value                    | -                       |
-| 28  | 'vo'         | V-Order                                      | opts.order = 2          |
-| 27  | 'tm'         | Temporal Moment                              | opts.order = 3          |
-| 26  | 'damv'       | Difference Absolute Mean Value               | -                       |
-| 25  | 'ar'         | Auto-Regressive Model                        | opts.order = 4          |
-| 24  | 'mad'        | Mean Absolute Deviation                      | -                       |
-| 23  | 'iqr'        | Interquartile Range                          | -                       |
-| 22  | 'skew'       | Skewness                                     | -                       |
-| 21  | 'kurt'       | Kurtosis                                     | -                       |
-| 20  | 'cov'        | Coefficient of Variation                     | -                       |
-| 19  | 'sd'         | Standard Deviation                           | -                       |
-| 18  | 'var'        | Variance                                     | -                       |
-| 17  | 'ae'         | Average Energy                               | -                       |
-| 16  | 'iemg'       | Integrated EMG                               | -                       |
-| 15  | 'mav'        | Mean Absolute Value                          | -                       |
-| 14  | 'ssc'        | Slope Sign Change                            | opts.thres = 0.01       |
-| 13  | 'zc'         | Zero Crossing                                | opts.thres = 0.01       |
-| 12  | 'wl'         | Waveform Length                              | -                       |
-| 11  | 'rms'        | Root Mean Square                             | -                       |
-| 10  | 'aac'        | Average Amplitude Change                     | -                       |
-| 09  | 'dasdv'      | Difference Absolute Standard Deviation Value | -                       |
-| 08  | 'ld'         | Log Detector                                 | -                       |
-| 07  | 'mmav'       | Modified Mean Absolute Value                 | -                       |
-| 06  | 'mmav2'      | Modified Mean Absolute Value 2               | -                       |
-| 05  | 'myop'       | Myopulse Percentage Rate                     | opts.thres = 0.016      |
-| 04  | 'ssi'        | Simple Square Integral                       | -                       |
-| 03  | 'vare'       | Variance of EMG                              | -                       |
-| 02  | 'wa'         | Willison Amplitude                           | opts.thres = 0.01       |
-| 01  | 'mfl'        | Maximum Fractal Length                       | -                       |
+| 40  | `'emav'`     | Enhanced Mean absolute value                 | -                       |
+| 39  | `'ewl'`      | Enhanced Wavelength                          | -                       |
+| 38  | `'fzc'`      | New Zero Crossing                            | -                       |
+| 37  | `'asm'`      | Absolute Value of Summation of *exp* root    | -                       |
+| 36  | `'ass'`      | Absolute Value of Summation of Square Root   | -                       |
+| 35  | `'msr'`      | Mean Value of Square Root                    | -                       |
+| 34  | `'ltkeo'`    | Log Teager Kaiser Energy Operator            | -                       |
+| 33  | `'lcov'`     | Log Coefficient of Variation                 | -                       |
+| 32  | `'card'`     | Cardinality                                  | opts.thres = 0.01       |
+| 31  | `'ldasdv'`   | Log Difference Absolute Standard Deviation   | -                       |
+| 30  | `'ldamv'`    | Log Difference Absolute Mean Value           | -                       |
+| 29  | `'dvarv'`    | Difference Variance Value                    | -                       |
+| 28  | `'vo'`       | V-Order                                      | opts.order = 2          |
+| 27  | `'tm'`       | Temporal Moment                              | opts.order = 3          |
+| 26  | `'damv'`     | Difference Absolute Mean Value               | -                       |
+| 25  | `'ar'`       | Auto-Regressive Model                        | opts.order = 4          |
+| 24  | `'mad'`      | Mean Absolute Deviation                      | -                       |
+| 23  | `'iqr'`      | Interquartile Range                          | -                       |
+| 22  | `'skew'`     | Skewness                                     | -                       |
+| 21  | `'kurt'`     | Kurtosis                                     | -                       |
+| 20  | `'cov'`      | Coefficient of Variation                     | -                       |
+| 19  | `'sd'`       | Standard Deviation                           | -                       |
+| 18  | `'var'`      | Variance                                     | -                       |
+| 17  | `'ae'`       | Average Energy                               | -                       |
+| 16  | `'iemg'`     | Integrated EMG                               | -                       |
+| 15  | `'mav'`      | Mean Absolute Value                          | -                       |
+| 14  | `'ssc'`      | Slope Sign Change                            | opts.thres = 0.01       |
+| 13  | `'zc'`       | Zero Crossing                                | opts.thres = 0.01       |
+| 12  | `'wl'`       | Waveform Length                              | -                       |
+| 11  | `'rms'`      | Root Mean Square                             | -                       |
+| 10  | `'aac'`      | Average Amplitude Change                     | -                       |
+| 09  | `'dasdv'`    | Difference Absolute Standard Deviation Value | -                       |
+| 08  | `'ld'`       | Log Detector                                 | -                       |
+| 07  | `'mmav'`     | Modified Mean Absolute Value                 | -                       |
+| 06  | `'mmav2'`    | Modified Mean Absolute Value 2               | -                       |
+| 05  | `'myop'`     | Myopulse Percentage Rate                     | opts.thres = 0.016      |
+| 04  | `'ssi'`      | Simple Square Integral                       | -                       |
+| 03  | `'vare'`     | Variance of EMG                              | -                       |
+| 02  | `'wa'`       | Willison Amplitude                           | opts.thres = 0.01       |
+| 01  | `'mfl'`      | Maximum Fractal Length                       | -                       |
 
 
 ## Cite As
