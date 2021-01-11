@@ -5,7 +5,7 @@
 [![GitHub release](https://img.shields.io/badge/release-1.4-green.svg)](https://github.com/JingweiToo/EMG-Feature-Extraction-Toolbox)
 
 ---
-> "Toward Talent Scientist: Sharing and Learning Together"
+> `Toward Talent Scientist: Sharing and Learning Together`
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
 ---
 
