@@ -5,8 +5,8 @@
 [![GitHub release](https://img.shields.io/badge/release-1.4-green.svg)](https://github.com/JingweiToo/EMG-Feature-Extraction-Toolbox)
 
 ---
-> `Toward Talent Scientist: Sharing and Learning Together`
->  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
+> "Toward Talent Scientist: Sharing and Learning Together"
+>  --- [![WordPress](https://img.shields.io/badge/Website-Jingwei%20Too-blueviolet?style=flat-square&logo=wordpress)](https://jingweitoo.wordpress.com/)
 ---
 
 ![Wheel](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/db6a0e07-32ec-4811-b2f8-55a80e53165e/23065655-7c83-43ba-93d5-2f4ad98c54a7/images/screenshot.PNG)
